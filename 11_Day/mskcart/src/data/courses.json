@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "title": "React for Beginners",
+    "description": "Learn the fundamentals of React, including components, props, and state.",
+    "instructor": "John Doe",
+    "duration": "4 weeks",
+    "price": 49.99,
+    "image": "https://placehold.co/300x200?text=React",
+    "details": "This course covers JSX, functional components, hooks, and building small projects to solidify your knowledge."
+  },
+  {
+    "id": 2,
+    "title": "Advanced JavaScript",
+    "description": "Deep dive into JavaScript concepts like closures, prototypes, and async programming.",
+    "instructor": "Jane Smith",
+    "duration": "6 weeks",
+    "price": 79.99,
+    "image": "https://placehold.co/300x200?text=JavaScript",
+    "details": "We'll explore advanced ES6+ features, write reusable modules, and practice with complex real-world problems."
+  },
+  {
+    "id": 3,
+    "title": "Fullstack Web Development",
+    "description": "Build complete web apps using Node.js, Express, MongoDB, and React.",
+    "instructor": "Alex Johnson",
+    "duration": "10 weeks",
+    "price": 199.99,
+    "image": "https://placehold.co/300x200?text=FullStack",
+    "details": "You'll create a production-ready MERN application, handle authentication, deploy to the cloud, and more."
+  },
+  {
+    "id": 4,
+    "title": "UI/UX Design Fundamentals",
+    "description": "Learn the principles of effective user interface and experience design.",
+    "instructor": "Sara Lee",
+    "duration": "3 weeks",
+    "price": 39.99,
+    "image": "https://placehold.co/300x200?text=UI/UX",
+    "details": "Understand color theory, typography, wireframing, and how to create prototypes with Figma."
+  },
+  {
+    "id": 5,
+    "title": "Data Structures & Algorithms",
+    "description": "Master essential algorithms and data structures to ace coding interviews.",
+    "instructor": "Mike Brown",
+    "duration": "8 weeks",
+    "price": 99.99,
+    "image": "https://placehold.co/300x200?text=DSA",
+    "details": "Covers linked lists, trees, graphs, sorting, searching, and problem-solving strategies."
+  }
+]
