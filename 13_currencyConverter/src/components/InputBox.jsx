@@ -14,7 +14,7 @@ const InputBox = ({
 
     // This hook simply generates a unique id for any item
     // NOTE: DO NOT use this hook to generate keys for your list items, they should come from your data (api etc)
-    amountInputId = useId()
+    const amountInputId = useId()
 
     return (
         <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
