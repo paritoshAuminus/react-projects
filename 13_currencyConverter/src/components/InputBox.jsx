@@ -40,7 +40,7 @@ const InputBox = ({
                     disabled={currencyDisable}
                 >
                     {/*
-                    Always remember the key in loops in react, if not given it has a huge
+                    Always remember to add the key in loops in react, if not given it has a huge
                     impact on the performance of the application.
                      */}
                     {currencyOptions.map((currency) => (

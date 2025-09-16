@@ -24,19 +24,34 @@ function App() {
     setConvertedAmount(amount * currencyInfo[to])
   }
 
-  return (
-    <>
-      <div className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
-        style={{ backgroundImage: `url(https://www.pexels.com/photo/city-street-photo-378570/)` }}
-      >
-        <div className="w-full">
-          <div className="w-full max-w-md mx-auto border border-gray-600 rounded-lg p-5 backdrop-blur-sm bg-white/30">
-            <form onSubmit={(e) => {}}></form>
-          </div>
+    return (
+        <div className={`bg-white p-3 rounded-lg text-sm flex `}>
+            <div className="w-1/2">
+                <label  className="text-black/40 mb-2 inline-block">
+                    label
+                </label>
+                <input
+                    
+                    className="outline-none w-full bg-transparent py-1.5"
+                    type="number"
+                    placeholder="Amount"
+                />
+            </div>
+            <div className="w-1/2 flex flex-wrap justify-end text-right">
+                <p className="text-black/40 mb-2 w-full">Currency Type</p>
+                <select
+                    className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none"
+                    
+                >
+                    
+                        <option value="usd">
+                            usd
+                        </option>
+                
+                </select>
+            </div>
         </div>
-      </div>
-    </>
-  )
+    );
 }
 
-export default App
+export default InputBox;
