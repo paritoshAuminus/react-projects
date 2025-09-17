@@ -1,58 +1,62 @@
-import React, { useId } from 'react'
+import { useId } from "react";
 
-const InputBox = ({
+function InputBox({
     label,
     amount,
     onAmountChange,
     onCurrencyChange,
     currencyOptions = [],
     selectCurrency = 'usd',
-    amountDisable = false,
+    amountDisabled = false,
     currencyDisable = false,
-    className = ''
-}) => {
+    className = "",
+}) {
 
-    // This hook simply generates a unique id for any item
-    // NOTE: DO NOT use this hook to generate keys for your list items, they should come from your data (api etc)
+    // The useId hook will help us generate a new id for the labels as there are lot of them bound with the input
+    // DO NOT use useId while working with map to display lists, it should be generated from your own data/api etc
+
     const amountInputId = useId()
 
     return (
         <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
-            <div className='w-1/2'>
-                <label htmlFor={amountInputId} className='text-black/40 mb-2 inline-block'>
+            <div className="w-1/2">
+                <label htmlFor={amountInputId} className="text-black/40 mb-2 inline-block">
                     {label}
                 </label>
                 <input
                     id={amountInputId}
-                    type="text"
-                    className='outline-none w-full bg-transparent py-1.5'
-                    placeholder='Amount'
-                    disabled={amountDisable}
+                    className="outline-none w-full bg-transparent py-1.5"
+                    type="number"
+                    placeholder="Amount"
+                    disabled={amountDisabled}
                     value={amount}
-                    onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}
+                    // we don't know if there exists a method called onAmountChange, hence the the logical operator
+                    // JS can take e.target.value as a string which would be problematic hence Number
+                    onChange={(e) => onAmountChange &&
+                        onAmountChange(Number(e.target.value))}
                 />
             </div>
-            <div className='w-1/2 flex flex-wrap justify-end text-right'>
-                <p className='text-black/40 mb-2 w-full'>Currency Type</p>
-                <select className='rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none'
+            <div className="w-1/2 flex flex-wrap justify-end text-right">
+                <p className="text-black/40 mb-2 w-full">Currency Type</p>
+                <select
+                    className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none"
                     value={selectCurrency}
-                    onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}
+                    onChange={(e) => onCurrencyChange &&
+                        onCurrencyChange(e.target.value)}
                     disabled={currencyDisable}
                 >
-                    {/*
-                    Always remember to add the key in loops in react, if not given it has a huge
-                    impact on the performance of the application.
-                     */}
                     {currencyOptions.map((currency) => (
+                        // Always remember the key in react, if not given it can have heavy repurcussions on the performance of the app
                         <option
                             key={currency}
-                            value={currency}
-                        >{currency}</option>
+                            value={currency}>
+                            {currency}
+                        </option>
                     ))}
                 </select>
             </div>
         </div>
-    )
+    );
 }
 
 export default InputBox;
