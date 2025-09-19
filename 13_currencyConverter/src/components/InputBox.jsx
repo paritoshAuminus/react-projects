@@ -1,16 +1,6 @@
 import { useId } from "react";
 
-function InputBox({
-    label,
-    amount,
-    onAmountChange,
-    onCurrencyChange,
-    currencyOptions = [],
-    selectCurrency = 'usd',
-    amountDisabled = false,
-    currencyDisable = false,
-    className = "",
-}) {
+function InputBox({ label, amount, onAmountChange, onCurrencyChange, currencyOptions = [], selectCurrency = 'usd', amountDisabled = false, currencyDisable = false, className = "", }) {
 
     // The useId hook will help us generate a new id for the labels as there are lot of them bound with the input
     // DO NOT use useId while working with map to display lists, it should be generated from your own data/api etc
