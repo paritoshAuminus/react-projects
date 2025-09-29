@@ -1,8 +1,18 @@
 import { configureStore } from "@reduxjs/toolkit";
 import counterReducer from "../features/counter/counterSlice"
+import userReducer from '../features/userData/userSlice'
+
 
 /*
-Store is a centralised location from which data is shared and mutaed, 
+Step 1 - store.js
+Step 2 - counterSlice.js
+Step 3 - Counter.jsx
+Step 4 - Main.jsx
+*/
+
+
+/*
+Store is a centralised location from which data is shared and mutated, 
 it however doesn't store all the data itself.
 
 In the obove import statement we see that we have imported the reducer from
@@ -12,6 +22,7 @@ reducers and those reducers are attached inside the store as seen below
 
 export const store = configureStore({
     reducer: {
-        counter: counterReducer
+        counter: counterReducer,
+        user: userReducer
     }
 })
