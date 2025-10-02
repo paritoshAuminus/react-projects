@@ -1,27 +1,53 @@
-# Topics that extended react knowledge:
+# 1. Expense Tracker with Charts
 
-> <code>defaultProps</code> and <code>PropTypes</code>
-> <code>event</code> object
+## Features:
 
-## <code>defaultProps</code> and <code>PropTypes</code>
+- Add income & expenses with categories
+- Show balance summary
+- Use chart.js or recharts for a pie chart
+- Store data in localStorage / Firebase
 
-Default props and prop types should be used in consideration as one of them is deprecated in the update after v19 and the other is also rarely used in production. Although while using vanilla js with react in a vite react app, default props is very useful for preventing the site from crashing in case there are no props provided to the component. Below is the syntax for the default props as seen in the video, please make sure to see the corrected version in case it was updated
+_NOTE: Why: You’ll practice forms, state, visualization._
 
-<pre>
-<code>
-ComponentName.defaultProps = {
-    propName1: value1 (string/Number)
-    propName2: value2 (string/Number)
-}
-</code>
-</pre>
+# 2. Weather / News / Crypto Dashboard
 
-## The <code>event</code> object
+## Features:
 
-Event object is a built-in javascript object which has been used multiple times while using event delegation to target different html elements and to facilitate javascript interactions with the DOM.
+- Fetch from an API (OpenWeather, NewsAPI, CoinGecko)
+- Dark/light mode toggle
+- Loading & error states
 
-To see the javascript <code>event</code> object, you can add an <code>event handler</code> like react's <code>OnClick</code> handler to capture the event during clicking the element and then logging the object on either the DOM or console to see all the available properties to be worked with, like <code>style</code>, <code>target</code>, <code>innerContent</code> to name a few.
+_NOTE: Why: You’ll practice API handling, conditional rendering, UI states._
 
-> Example: <code>event.target.value</code>
+# 3. Mini E-commerce Store
 
-> Source: BroCode react one shot video on youtube
+## Features:
+
+- Product listing page
+- Add to cart, remove, checkout
+- Context API or Redux for cart state
+- Routing for product details
+
+_NOTE: Why: This is a classic real-world app that tests everything._
+
+# 4. Authentication-based App
+
+> Ideas: Blog app, Notes app, or Task Manager (but with auth)
+
+## Features:
+
+- Sign up / Login (Firebase auth or JWT with backend)
+- Protected routes
+- User-specific data
+
+_NOTE: Why: This will teach you auth flows, which are everywhere._
+
+# 5. Trello/Notion Clone (Drag & Drop)
+
+## Features:
+
+- Boards, lists, and tasks
+- Drag-and-drop tasks between lists (using react-beautiful-dnd)
+- Save data in localStorage or backend
+
+_NOTE: Why: You’ll learn complex state management and advanced UI patterns._

@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import counterReducer from "../features/counter/counterSlice"
 import userReducer from '../features/userData/userSlice'
+import newUserReducer from '../features/newUsers/newUsersSlice'
 
 
 /*
@@ -23,6 +24,7 @@ reducers and those reducers are attached inside the store as seen below
 export const store = configureStore({
     reducer: {
         counter: counterReducer,
-        user: userReducer
+        user: userReducer,
+        users: newUserReducer
     }
 })
