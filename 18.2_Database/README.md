@@ -1,0 +1,1 @@
+- Fire up the json-server: `npx json-server db.json`
