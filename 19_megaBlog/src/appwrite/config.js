@@ -1,4 +1,4 @@
-import { Client, Databases, ID, createDocument } from "appwrite"
+import { Client, Databases, ID, TablesDB } from "appwrite"
 import conf from "../config/conf";
 
 export class Service {
@@ -10,22 +10,21 @@ export class Service {
         this.client
         .setEndpoint(conf.appwriteUrl)
         .setProject(conf.appwriteProjectId)
-        this.databases = new Databases(this.client)
+        this.databases = new TablesDB(this.client)
         this.bucket = new Storage(this.client)
     }
 
     async createPost({title, slug, content, featuredImage, status, userId}) {
         try {
-            return await this.databases.createDocument(
-                conf.appwriteDatabaseId,
+            return await this.databases.createRow(
                 conf.appwriteCollectionId,
-                slug,
                 {
                     title,
                     content,
                     featuredImage,
                     status,
-                    userId
+                    userId,
+                    slug
                 }
             )
         } catch (error) {
