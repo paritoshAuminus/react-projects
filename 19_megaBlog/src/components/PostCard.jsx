@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import appwriteService from '../appwrite/config'
 
 export const PostCard = (
-    $id,    // appwrite syntax not vanilla syntax
+    $id,    // appwrite syntax not vanilla JS syntax
     title,
     featuredImage,
 ) => {

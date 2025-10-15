@@ -13,7 +13,7 @@ const Login = () => {
     const { register, handleSubmit } = useForm()
     const [error, setError] = useState("")
 
-    const login = async () => {
+    const login = async (data) => {
         setError('')
         try {
             const session = await authService.login(data)
@@ -35,7 +35,7 @@ const Login = () => {
             <div className={`mx-auto w-full max-w-lg b-gray-100 rounded-xl p-10 border border-black/10`}>
                 <div className='mb-2 flex justify-center'>
                     <span className='inline-block max-w-[100px] w-full'>
-                        <Logo />
+                        <Logo width='100%'/>
                     </span>
                 </div>
                 <h2 className='text-center text-2xl font-bold leading-tight'>Sign in to your account</h2>
@@ -50,6 +50,9 @@ const Login = () => {
                 </p>
                 {error && <p className='text-red-600 mt-8 text-center'>{error}</p>}
                 <form
+                // handleSubmit comes from react form hook, DO NOT name your submit method as handle submit
+                // handleSubmit accepts my method (created for sumission) as its argument; say this is how I want to submit my data
+                // In reality handleSubmit is an event which handles submissions via react form hook
                     onSubmit={handleSubmit(login)}
                     className='mt-8'>
                     <div className='space-y-5'>
