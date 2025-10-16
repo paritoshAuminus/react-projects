@@ -2,11 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import appwriteService from '../appwrite/config'
 
-export const PostCard = (
+export default function PostCard (
     $id,    // appwrite syntax not vanilla JS syntax
     title,
     featuredImage,
-) => {
+) {
   return (
     <Link to={`/post/${$id}`}>
         <div className='w-full bg-gray-100 rounded-xl p-4'>
